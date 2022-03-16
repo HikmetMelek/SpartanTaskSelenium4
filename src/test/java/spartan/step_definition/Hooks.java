@@ -11,7 +11,7 @@ public class Hooks {
 
     @Before("@db")
     public void setUpdb(){
-        System.out.println("\tConnecting to database...");
+   //     System.out.println("\tConnecting to database...");
         DBUtils.createConnection();
         Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -19,7 +19,7 @@ public class Hooks {
 
     @After("@db")
     public void closeDb(){
-        System.out.println("\tDisconnecting to database...");
+    //    System.out.println("\tDisconnecting to database...");
         DBUtils.destroy();
         Driver.closeDriver();
     }
