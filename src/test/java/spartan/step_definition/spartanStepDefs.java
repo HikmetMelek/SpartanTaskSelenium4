@@ -20,6 +20,7 @@ public class spartanStepDefs {
 
     @Given("user is on the Spartan Home Page")
     public void user_is_on_the_Spartan_Home_Page() {
+
         Driver.get().get(ConfigurationReader.get("url"));
     }
 
